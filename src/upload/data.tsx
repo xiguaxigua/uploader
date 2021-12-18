@@ -62,7 +62,7 @@ export const COLUMNS: any = [
     key: "size",
     width: 100,
     align: "center",
-    render: (size) => <Tag color="magenta">{numerify(size, "0.0 b")}</Tag>,
+    render: (size) => <Tag color="blue">{numerify(size, "0.0 b")}</Tag>,
   },
   {
     title: "时间",
