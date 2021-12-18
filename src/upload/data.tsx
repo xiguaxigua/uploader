@@ -13,7 +13,7 @@ export const COLUMNS: any = [
   {
     title: "缩略图",
     dataIndex: "pic",
-    width: 70,
+    width: 80,
     key: "pic",
     render: (_, row) => (
       <img
@@ -47,10 +47,10 @@ export const COLUMNS: any = [
     title: "地址",
     dataIndex: "url",
     key: "url",
-    width: 130,
+    width: 120,
     render: (url) => (
       <Tooltip title={url}>
-        <span className="one-line url" style={{ width: "130px" }}>
+        <span className="one-line url" style={{ width: "120px" }}>
           {url}
         </span>
       </Tooltip>

@@ -3,7 +3,6 @@ import { message, Table, Upload as UC, Spin, Button } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { STORE_KEY, COLUMNS } from "./data";
-import "./style.css";
 
 const { Dragger } = UC;
 const UPLOAD_DOMAIN = "https://upload.xiguaxigua.com";
@@ -74,6 +73,7 @@ export const Upload: FC<any> = () => {
       setListData((d) =>
         files.current
           .map((file) => ({
+            id: `${Date.now}${(Math.random()*1e5).toFixed(0)}`,
             name: file.name,
             size: file.size,
             createdAt: Date.now(),
@@ -111,7 +111,13 @@ export const Upload: FC<any> = () => {
         <span style={{ fontSize: "18px" }}>上传历史</span>
         <Button onClick={() => clearHistory()}>清空上传历史</Button>
       </div>
-      <Table className="data-table" dataSource={listData} columns={COLUMNS} />;
+      <Table
+        bordered={true}
+        rowKey="id"
+        className="data-table"
+        dataSource={listData}
+        columns={COLUMNS}
+      />
     </div>
   );
 };
