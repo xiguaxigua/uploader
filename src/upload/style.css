@@ -1,0 +1,43 @@
+.page-upload {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.page-upload .data-table {
+  margin-top: 10px;
+}
+
+.page-upload .one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-upload .name {
+  display: inline-block;
+}
+
+.page-upload .url {
+    display: inline-block;
+}
+
+.page-upload .operate-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.page-upload .table-title {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ant-table-fixed {
+  table-layout: fixed;
+}
+
+.ant-table-tbody > tr > td {
+  word-wrap: break-word;
+  word-break: break-all;
+}
