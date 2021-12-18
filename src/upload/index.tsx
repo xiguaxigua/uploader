@@ -46,7 +46,6 @@ export const Upload: FC<any> = () => {
 
   const triggetUpload = async () => {
     const formData = new FormData();
-    console.log(files.current);
     files.current.forEach((file) => {
       formData.append(
         `file${Date.now()}${(Math.random() * 1e3).toFixed(0)}`,
@@ -64,12 +63,10 @@ export const Upload: FC<any> = () => {
           "Page-Url": window.location.href,
         },
       });
-      console.log(res);
       const fileMap = res.data.reduce((acc, curr) => {
         acc[curr.split("/").slice(-1)[0]] = curr;
         return acc;
       }, {});
-      console.log("fileMap", fileMap);
       setListData((d) =>
         files.current
           .map((file) => ({
